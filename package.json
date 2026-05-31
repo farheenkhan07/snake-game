@@ -1,0 +1,14 @@
+{
+  "name": "snake-game",
+  "version": "1.0.0",
+  "description": "A classic Snake game built with vanilla HTML, CSS, and JavaScript",
+  "scripts": {
+    "lint:js": "eslint script.js",
+    "lint:html": "html-validate index.html",
+    "lint": "npm run lint:js && npm run lint:html"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "html-validate": "^9.0.0"
+  }
+}
