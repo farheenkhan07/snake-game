@@ -1,0 +1,108 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: #0d0d0d;
+  font-family: 'Segoe UI', sans-serif;
+  color: #e2e8f0;
+}
+
+h1 {
+  font-size: 28px;
+  letter-spacing: 3px;
+  color: #4ade80;
+  text-shadow: 0 0 12px #4ade8088;
+}
+
+/* Score / Level row */
+.scoreboard {
+  display: flex;
+  gap: 24px;
+}
+
+.score-box {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 6px 20px;
+  font-size: 14px;
+  color: #94a3b8;
+  letter-spacing: 1px;
+}
+
+.score-box span {
+  color: #4ade80;
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+/* The game board */
+canvas {
+  display: block;
+  border-radius: 12px;
+  border: 2px solid #1e3a2a;
+  box-shadow: 0 0 30px #4ade8033;
+  background: #111;
+}
+
+/* Start / Game-over overlay sits on top of the canvas */
+.overlay {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: rgba(0, 0, 0, 0.78);
+  border-radius: 12px;
+  pointer-events: all;
+}
+
+.overlay.hidden { display: none; }
+
+.overlay h2 {
+  font-size: 32px;
+  color: #4ade80;
+  text-shadow: 0 0 16px #4ade80aa;
+  letter-spacing: 2px;
+}
+
+.overlay p {
+  font-size: 14px;
+  color: #94a3b8;
+  text-align: center;
+  padding: 0 24px;
+  line-height: 1.6;
+}
+
+.overlay button {
+  margin-top: 8px;
+  padding: 10px 36px;
+  background: #4ade80;
+  color: #0d0d0d;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  box-shadow: 0 0 16px #4ade8066;
+}
+
+.overlay button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 24px #4ade80aa;
+}
+
+.hint {
+  font-size: 12px;
+  color: #334155;
+  letter-spacing: 0.5px;
+}
